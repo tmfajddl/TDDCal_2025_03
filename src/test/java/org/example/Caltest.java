@@ -31,8 +31,44 @@ public class Caltest {
     }
 
     @Test
-    @DisplayName("1000 + 200 == 1200")
+    @DisplayName("50 - 30 == 20")
     public void test5() {
-        assertThat(Calc.run("1000 + 200")).isEqualTo(1200);
+        assertThat(Calc.run("50 - 30")).isEqualTo(20);
+
+    }
+
+    @Test
+    @DisplayName("10 + 20 + 30 == 60")
+    public void test6() {
+        assertThat(Calc.run("10 + 20 + 30")).isEqualTo(60);
+
+    }
+
+    @Test
+    @DisplayName("10 - 20 + 30 == 20")
+    public void test7() {
+        assertThat(Calc.run("10 - 20 + 30")).isEqualTo(20);
+
+    }
+
+    @Test
+    @DisplayName("10 - 20 - 30 == 20")
+    public void test8() {
+        assertThat(Calc.run("10 - 20 - 30")).isEqualTo(-40);
+
+    }
+
+    @Test
+    @DisplayName("10 - 10 - 10 - 10 + 10 + 10 - 10 == -10")
+    public void test9() {
+        assertThat(Calc.run("10 - 10 - 10 - 10 + 10 + 10 - 10")).isEqualTo(-10);
+
+    }
+
+    @Test
+    @DisplayName("10 * 10 * 10 == 1000")
+    public void test10() {
+        assertThat(Calc.run("10 * 10 * 10")).isEqualTo(1000);
+
     }
 }
