@@ -78,4 +78,16 @@ public class Caltest {
         assertThat(Calc.run("10 + 10 * 10")).isEqualTo(110);
 
     }
+    @Test
+    @DisplayName("10 * 20 + 10 + 5 * 2 == 220")
+    public void test12() {
+        assertThat(Calc.run("10 * 20 + 10 + 5 * 2")).isEqualTo(220);
+
+    }
+    @Test
+    @DisplayName("((20 + 20)) + 20 == 60")
+    public void test13() {
+        assertThat(Calc.run("((20 + 20)) + 20")).isEqualTo(60);
+
+    }
 }
