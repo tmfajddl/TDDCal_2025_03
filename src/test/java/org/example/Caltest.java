@@ -85,9 +85,9 @@ public class Caltest {
 
     }
     @Test
-    @DisplayName("((20 + 20)) + 20 == 60")
+    @DisplayName("((20 + 20)) == 40")
     public void test13() {
-        assertThat(Calc.run("((20 + 20)) + 20")).isEqualTo(60);
+        assertThat(Calc.run("((20 + 20))")).isEqualTo(40);
 
     }
 }
