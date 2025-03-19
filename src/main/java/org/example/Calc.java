@@ -58,16 +58,31 @@ public class Calc {
     }
 
     private static String stripOuterBrackets(String exp) {
-
         int outerBracketsCount = 0;
-
-        while (exp.charAt(outerBracketsCount) == '(' && exp.charAt(exp.length() - 1 - outerBracketsCount) == ')') {
-            outerBracketsCount++;
+        int i = 0;
+        int j = exp.length()-1;
+        while (i < exp.length()) {
+            while (j > ) {
+                while (exp.charAt(i) == '(' && exp.charAt(j) == ')') {
+                    outerBracketsCount++;
+                }
+                j--;
+            }
+            i++;
         }
 
         if (outerBracketsCount == 0) return exp;
 
-        return exp.substring(outerBracketsCount, exp.length() - outerBracketsCount);
+        else{
+            String sub = exp.substring(i + 1, j);
+            String[] arr = sub.split(" \\+ ");
+            int a = 0;
+
+            for (int n = 0; n < arr.length; n++) {
+                a += Integer.parseInt(arr[n]);
+            }
+            return exp.replace(sub, String.valueOf(a));
+        }
     }
 
 }
