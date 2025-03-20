@@ -132,4 +132,28 @@ public class Caltest {
         assertThat(Calc.run("3 * 1 + (1 - (4 * 1 - (1 - 1)))")).isEqualTo(0);
 
     }
+    @Test
+    @DisplayName("3 * 1 + (1 - (4 * 1 - 1 * 2)) == 2")
+    public void test21() {
+        assertThat(Calc.run("3 * 1 + (1 - (4 * 1 - 1 * 2))")).isEqualTo(2);
+
+    }
+    @Test
+    @DisplayName("5 + 1 * (1 - (4 * 1 + 1 * 2)) == 0")
+    public void test22() {
+        assertThat(Calc.run("5 + 1 * (1 - (4 * 1 + 1 * 2))")).isEqualTo(0);
+
+    }
+    @Test
+    @DisplayName("5 + 1 + (1 - (4 * 1 + 1 * 2)) + 3 == 4")
+    public void test23() {
+        assertThat(Calc.run("5 + 1 + (1 - (4 * 1 + 1 * 2)) + 3")).isEqualTo(4);
+
+    }
+    @Test
+    @DisplayName("(5 + 3) - (3 + 1) == 4")
+    public void test24() {
+        assertThat(Calc.run("(5 + 3) - (3 + 1)")).isEqualTo(4);
+
+    }
 }
